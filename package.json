@@ -21,7 +21,7 @@
     "deploy-testnet": "graph deploy chimpExchange subgraph.mantle.yaml --ipfs https://ipfs.testnet.mantle.xyz --node https://graph.testnet.mantle.xyz/deploy",
     "sync:local": "yarn import-abis && yarn update-addresses dockerParity && yarn codegen && yarn build",
     "create-node:linea":"graph create --node https://graph-deploy.goerli.linea.build Chimp-Exchange/chimp-exchange-subgraph",
-    "deploy-node:linea": "graph deploy subgraph.linea_testnet --node https://graph-deploy.goerli.linea.build --ipfs https://graph-ipfs.goerli.linea.build https://github.com/Chimp-Exchange/chimp-exchange-subgraph"
+    "deploy-node:linea": "graph deploy subgraph.linea_testnet --node https://graph-deploy.goerli.linea.build --ipfs https://graph-ipfs.goerli.linea.build Chimp-Exchange/chimp-exchange-subgraph"
   },
   "devDependencies": {
     "@apollo/client": "^3.3.9",
