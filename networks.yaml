@@ -700,8 +700,8 @@ mantle:
   ComposableStablePoolV4Factory:
     address: "0xeDaAd5aca403033D3d20A39779aEfB2469ab3eeB"
     startBlock: 15852589
-linea_testnet:
-  network: linea_testnet
+linea-goerli:
+  network: linea-goerli
   EventEmitter:
     address: "0x7B1b19Fef7bF01B8794BECeBA678F8B2BDaFbD2F"
     startBlock: 1389900
