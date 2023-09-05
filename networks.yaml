@@ -709,8 +709,8 @@ linea-goerli:
     address: "0x62C9149473fdeE1306847A21c3a9Dfe53726cC1C"
     startBlock: 1389900
   WeightedPoolV4Factory:
-    address: "0x1dB9b58528D5b494c658fBE1DC24dba558f25007"
+    address: "0xCd86BDde8b9B348e03555A344751dC18E534d6bC"
     startBlock: 1389900
   ComposableStablePoolV4Factory:
-    address: "0x3B4a649A3b545e0fd6D7D98746eECc95Cf9dDCB6"
+    address: "0x93dB1be491457046da6Bb700801B4FE70Ad65DE5"
     startBlock: 1389900
