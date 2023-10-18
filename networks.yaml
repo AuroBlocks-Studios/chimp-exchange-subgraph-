@@ -714,3 +714,17 @@ linea-goerli:
   ComposableStablePoolV4Factory:
     address: "0x93dB1be491457046da6Bb700801B4FE70Ad65DE5"
     startBlock: 1389900
+linea:
+  network: linea
+  EventEmitter:
+    address: "0x5191CB95D6395477a32753966D8Ebce39B7DCDBe"
+    startBlock: 660572
+  Vault:
+    address: "0x286381aEdd20e51f642fE4A200B5CB2Fe3729695"
+    startBlock: 660572
+  WeightedPoolV4Factory:
+    address: "0x0A5064b28dF6d028B8e04299ddb972D03be14b30"
+    startBlock: 660572
+  ComposableStablePoolV4Factory:
+    address: "0x6D47B3b1b54F47Fe020F9705dE81aF4a512872f9"
+    startBlock: 660572

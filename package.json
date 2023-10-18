@@ -20,7 +20,9 @@
     "create-node": "graph create --node https://graph.testnet.mantle.xyz/deploy chimpExchange",
     "deploy-testnet": "graph deploy chimpExchange subgraph.mantle.yaml --ipfs https://ipfs.testnet.mantle.xyz --node https://graph.testnet.mantle.xyz/deploy",
     "sync:local": "yarn import-abis && yarn update-addresses dockerParity && yarn codegen && yarn build",
-    "create-node:linea":"graph create --node https://graph-deploy.goerli.linea.build Chimp-Exchange/chimp-exchange-subgraph",
+    "create-node:linea-testnet": "graph create --node https://graph-deploy.goerli.linea.build Chimp-Exchange/chimp-exchange-subgraph",
+    "deploy-node:linea-testnet": "graph deploy Chimp-Exchange/chimp-exchange-subgraph subgraph.linea-goerli.yaml --ipfs https://graph-ipfs.goerli.linea.build --node https://graph-deploy.goerli.linea.build --version-label 0.0.1",
+    "create-node:linea": "graph create --node https://graph-deploy.goerli.linea.build Chimp-Exchange/chimp-exchange-subgraph",
     "deploy-node:linea": "graph deploy Chimp-Exchange/chimp-exchange-subgraph subgraph.linea-goerli.yaml --ipfs https://graph-ipfs.goerli.linea.build --node https://graph-deploy.goerli.linea.build --version-label 0.0.1"
   },
   "devDependencies": {
