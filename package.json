@@ -22,8 +22,8 @@
     "sync:local": "yarn import-abis && yarn update-addresses dockerParity && yarn codegen && yarn build",
     "create-node:linea-testnet": "graph create --node https://graph-deploy.goerli.linea.build Chimp-Exchange/chimp-exchange-subgraph",
     "deploy-node:linea-testnet": "graph deploy Chimp-Exchange/chimp-exchange-subgraph subgraph.linea-goerli.yaml --ipfs https://graph-ipfs.goerli.linea.build --node https://graph-deploy.goerli.linea.build --version-label 0.0.1",
-    "create-node:linea": "graph create --node https://graph-deploy.goerli.linea.build Chimp-Exchange/chimp-exchange-subgraph",
-    "deploy-node:linea": "graph deploy Chimp-Exchange/chimp-exchange-subgraph subgraph.linea-goerli.yaml --ipfs https://graph-ipfs.goerli.linea.build --node https://graph-deploy.goerli.linea.build --version-label 0.0.1"
+    "create-node:linea": "graph create --node https://graph-deploy.linea.build Chimp-Exchange/chimp-exchange-subgraph",
+    "deploy-node:linea": "graph deploy Chimp-Exchange/chimp-exchange-subgraph subgraph.linea.yaml --ipfs https://graph-ipfs.linea.build --node https://graph-deploy.linea.build --version-label 0.0.1"
   },
   "devDependencies": {
     "@apollo/client": "^3.3.9",
