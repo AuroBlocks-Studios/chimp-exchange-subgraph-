@@ -718,13 +718,13 @@ linea-mainnet:
   network: linea-mainnet
   EventEmitter:
     address: "0x5191CB95D6395477a32753966D8Ebce39B7DCDBe"
-    startBlock: 660572
+    startBlock: 605519
   Vault:
     address: "0x286381aEdd20e51f642fE4A200B5CB2Fe3729695"
-    startBlock: 660572
+    startBlock: 605519
   WeightedPoolV4Factory:
     address: "0x0E027d85f326Ff39ebCCbf4a79335c79324ca2Ce"
-    startBlock: 660572
+    startBlock: 605519
   ComposableStablePoolV4Factory:
     address: "0x55813EDB4b83a3286bB69c826Cb81BF8c7773524"
-    startBlock: 660572
+    startBlock: 605519
