@@ -723,8 +723,8 @@ linea-mainnet:
     address: "0x286381aEdd20e51f642fE4A200B5CB2Fe3729695"
     startBlock: 660572
   WeightedPoolV4Factory:
-    address: "0x0A5064b28dF6d028B8e04299ddb972D03be14b30"
+    address: "0x0E027d85f326Ff39ebCCbf4a79335c79324ca2Ce"
     startBlock: 660572
   ComposableStablePoolV4Factory:
-    address: "0x6D47B3b1b54F47Fe020F9705dE81aF4a512872f9"
+    address: "0x55813EDB4b83a3286bB69c826Cb81BF8c7773524"
     startBlock: 660572
