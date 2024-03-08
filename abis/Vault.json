@@ -120,6 +120,12 @@
         "internalType": "int256",
         "name": "delta",
         "type": "int256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "deployeraddress",
+        "type": "address"
       }
     ],
     "name": "InternalBalanceChanged",
@@ -133,6 +139,12 @@
         "internalType": "bool",
         "name": "paused",
         "type": "bool"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "deployeraddress",
+        "type": "address"
       }
     ],
     "name": "PausedStateChanged",
@@ -170,6 +182,12 @@
         "internalType": "uint256[]",
         "name": "protocolFeeAmounts",
         "type": "uint256[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "deployeraddress",
+        "type": "address"
       }
     ],
     "name": "PoolBalanceChanged",
@@ -207,6 +225,12 @@
         "internalType": "int256",
         "name": "managedDelta",
         "type": "int256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "deployeraddress",
+        "type": "address"
       }
     ],
     "name": "PoolBalanceManaged",
@@ -294,6 +318,12 @@
         "internalType": "uint256",
         "name": "amountOut",
         "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "deployeraddress",
+        "type": "address"
       }
     ],
     "name": "Swap",
@@ -618,7 +648,7 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "user",
+        "name": "account",
         "type": "address"
       }
     ],
@@ -753,7 +783,7 @@
     "name": "getProtocolFeesCollector",
     "outputs": [
       {
-        "internalType": "contract ProtocolFeesCollector",
+        "internalType": "contract IProtocolFeesCollector",
         "name": "",
         "type": "address"
       }

@@ -728,3 +728,17 @@ linea-mainnet:
   ComposableStablePoolV4Factory:
     address: "0x55813EDB4b83a3286bB69c826Cb81BF8c7773524"
     startBlock: 605519
+ten:
+  network: ten
+  EventEmitter:
+    address: "0x3Ba8Ac48A2ccf6Ba6eEB74b89190FDFBdDD817Fd"
+    startBlock: 5441816
+  Vault:
+    address: "0x9140084f70C3DF3ed0Cf7a13c7617CC7a45C3E25"
+    startBlock: 5441816
+  WeightedPoolV4Factory:
+    address: "0xC77c66523DFcfa9c01825bC2a4cc1E9B54029058"
+    startBlock: 5441816
+  ComposableStablePoolV4Factory:
+    address: "0xa6217afeDc94a93917f7325Eb3B8AC57df0B7267"
+    startBlock: 5441816

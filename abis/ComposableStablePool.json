@@ -67,6 +67,11 @@
             "internalType": "address",
             "name": "owner",
             "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "version",
+            "type": "string"
           }
         ],
         "internalType": "struct ComposableStablePool.NewPoolParams",
@@ -154,6 +159,12 @@
         "internalType": "bool",
         "name": "paused",
         "type": "bool"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "deployeraddress",
+        "type": "address"
       }
     ],
     "name": "PausedStateChanged",
@@ -163,16 +174,16 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "feeType",
-        "type": "uint256"
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "feeCache",
+        "type": "bytes32"
       },
       {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "protocolFeePercentage",
-        "type": "uint256"
+        "indexed": true,
+        "internalType": "address",
+        "name": "deployeraddress",
+        "type": "address"
       }
     ],
     "name": "ProtocolFeePercentageCacheUpdated",
@@ -186,6 +197,12 @@
         "internalType": "bool",
         "name": "enabled",
         "type": "bool"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "deployeraddress",
+        "type": "address"
       }
     ],
     "name": "RecoveryModeStateChanged",
@@ -199,6 +216,12 @@
         "internalType": "uint256",
         "name": "swapFeePercentage",
         "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "deployeraddress",
+        "type": "address"
       }
     ],
     "name": "SwapFeePercentageChanged",
@@ -272,19 +295,6 @@
     ],
     "name": "Transfer",
     "type": "event"
-  },
-  {
-    "inputs": [],
-    "name": "DELEGATE_PROTOCOL_SWAP_FEES_SENTINEL",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
   },
   {
     "inputs": [],
@@ -643,13 +653,19 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "getProtocolSwapFeeDelegation",
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "feeType",
+        "type": "uint256"
+      }
+    ],
+    "name": "getProviderFeeId",
     "outputs": [
       {
-        "internalType": "bool",
+        "internalType": "uint256",
         "name": "",
-        "type": "bool"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -1151,7 +1167,7 @@
         "type": "uint256[]"
       }
     ],
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1205,25 +1221,7 @@
         "type": "uint256[]"
       }
     ],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "contract IERC20",
-        "name": "token",
-        "type": "address"
-      },
-      {
-        "internalType": "bytes",
-        "name": "poolConfig",
-        "type": "bytes"
-      }
-    ],
-    "name": "setAssetManagerPoolConfig",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1386,6 +1384,19 @@
     "name": "updateTokenRateCache",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "version",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   }
 ]
