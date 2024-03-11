@@ -18,6 +18,12 @@
 				"internalType": "bytes32",
 				"name": "identifier",
 				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "deployeraddress",
+				"type": "address"
 			}
 		],
 		"name": "AuthorizationGranted",
@@ -37,6 +43,12 @@
 				"internalType": "bytes32",
 				"name": "identifier",
 				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "deployeraddress",
+				"type": "address"
 			}
 		],
 		"name": "AuthorizationRevoked",
@@ -68,6 +80,12 @@
 				"internalType": "uint256",
 				"name": "value",
 				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "deployeraddress",
+				"type": "address"
 			}
 		],
 		"name": "LogArgument",
@@ -80,6 +98,12 @@
 				"indexed": true,
 				"internalType": "address",
 				"name": "newOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "deployeraddress",
 				"type": "address"
 			}
 		],

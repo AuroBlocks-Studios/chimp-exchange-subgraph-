@@ -181,17 +181,19 @@ export function handleProtocolFeePercentageCacheUpdated(event: ProtocolFeePercen
   if (poolContract == null) return;
 
   let pool = Pool.load(poolContract.pool) as Pool;
+  /**
+   * Need to update this
+   */
+  // const feeType = event.params.feeType.toI32();
+  // const feePercentage = scaleDown(event.params.protocolFeePercentage, 18);
 
-  const feeType = event.params.feeType.toI32();
-  const feePercentage = scaleDown(event.params.protocolFeePercentage, 18);
-
-  if (feeType == ProtocolFeeType.Swap) {
-    pool.protocolSwapFeeCache = feePercentage;
-  } else if (feeType == ProtocolFeeType.Yield) {
-    pool.protocolYieldFeeCache = feePercentage;
-  } else if (feeType == ProtocolFeeType.Aum) {
-    pool.protocolAumFeeCache = feePercentage;
-  }
+  // if (feeType == ProtocolFeeType.Swap) {
+  //   pool.protocolSwapFeeCache = feePercentage;
+  // } else if (feeType == ProtocolFeeType.Yield) {
+  //   pool.protocolYieldFeeCache = feePercentage;
+  // } else if (feeType == ProtocolFeeType.Aum) {
+  //   pool.protocolAumFeeCache = feePercentage;
+  // }
 
   pool.save();
 }

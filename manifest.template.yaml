@@ -30,7 +30,7 @@ dataSources:
         - name: EventEmitter
           file: ./abis/EventEmitter.json
       eventHandlers:
-        - event: LogArgument(indexed address,indexed bytes32,bytes,uint256)
+        - event: LogArgument(indexed address,indexed bytes32,bytes,uint256,indexed address)
           handler: handleLogArgument
   {{/if}}
   - kind: ethereum/contract
@@ -72,13 +72,13 @@ dataSources:
         - name: FXPool
           file: ./abis/FXPool.json
       eventHandlers:
-        - event: Swap(indexed bytes32,indexed address,indexed address,uint256,uint256)
+        - event: Swap(indexed bytes32,indexed address,indexed address,uint256,uint256,address)
           handler: handleSwapEvent
-        - event: PoolBalanceChanged(indexed bytes32,indexed address,address[],int256[],uint256[])
+        - event: PoolBalanceChanged(indexed bytes32,indexed address,address[],int256[],uint256[],address)
           handler: handleBalanceChange
-        - event: PoolBalanceManaged(indexed bytes32,indexed address,indexed address,int256,int256)
+        - event: PoolBalanceManaged(indexed bytes32,indexed address,indexed address,int256,int256,address)
           handler: handleBalanceManage
-        - event: InternalBalanceChanged(indexed address,indexed address,int256)
+        - event: InternalBalanceChanged(indexed address,indexed address,int256,address)
           handler: handleInternalBalanceChange
   {{#if WeightedPoolFactory}}
   - kind: ethereum/contract
@@ -106,7 +106,7 @@ dataSources:
         - name: WeightedPool
           file: ./abis/WeightedPool.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewWeightedPool
   {{/if}}
   {{#if WeightedPoolV2Factory}}
@@ -137,7 +137,7 @@ dataSources:
         - name: WeightedPoolV2
           file: ./abis/WeightedPoolV2.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewWeightedPoolV2
   {{/if}}
   {{#if WeightedPoolV3Factory}}
@@ -168,7 +168,7 @@ dataSources:
         - name: WeightedPoolV2
           file: ./abis/WeightedPoolV2.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewWeightedPoolV3
   {{/if}}
   {{#if WeightedPoolV4Factory}}
@@ -201,7 +201,7 @@ dataSources:
         - name: ComposableStablePool
           file: ./abis/ComposableStablePool.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewWeightedPoolV4
   {{/if}}
   {{#if WeightedPool2TokenFactory}}
@@ -232,7 +232,7 @@ dataSources:
         - name: WeightedPool2Tokens
           file: ./abis/WeightedPool2Tokens.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewWeighted2TokenPool
   {{/if}}
   {{#if StablePoolFactory}}
@@ -548,7 +548,7 @@ dataSources:
         - name: StablePool
           file: ./abis/StablePool.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewComposableStablePool
   {{/if}}
   {{#if ComposableStablePoolV2Factory}}
@@ -581,7 +581,7 @@ dataSources:
         - name: StablePool
           file: ./abis/StablePool.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewComposableStablePoolV2
   {{/if}}
   {{#if ComposableStablePoolV3Factory}}
@@ -614,7 +614,7 @@ dataSources:
         - name: StablePool
           file: ./abis/StablePool.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewComposableStablePoolV3
   {{/if}}
   {{#if ComposableStablePoolV4Factory}}
@@ -647,7 +647,7 @@ dataSources:
         - name: StablePool
           file: ./abis/StablePool.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewComposableStablePoolV4
   {{/if}}
   {{#if HighAmpComposableStablePoolFactory}}
@@ -680,7 +680,7 @@ dataSources:
         - name: StablePool
           file: ./abis/StablePool.json
       eventHandlers:
-        - event: PoolCreated(indexed address)
+        - event: PoolCreated(indexed address,indexed address)
           handler: handleNewHighAmpComposableStablePool
   {{/if}}
   {{#if AaveLinearPoolFactory}}
@@ -1541,9 +1541,9 @@ templates:
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-        - event: SwapFeePercentageChanged(uint256)
+        - event: SwapFeePercentageChanged(uint256,indexed address)
           handler: handleSwapFeePercentageChange
-        - event: PausedStateChanged(bool)
+        - event: PausedStateChanged(bool,indexed address)
           handler: handlePausedStateChanged
   - kind: ethereum/contract
     name: WeightedPoolV2
@@ -1568,13 +1568,13 @@ templates:
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-        - event: SwapFeePercentageChanged(uint256)
+        - event: SwapFeePercentageChanged(uint256,indexed address)
           handler: handleSwapFeePercentageChange
-        - event: ProtocolFeePercentageCacheUpdated(indexed uint256,uint256)
+        - event: ProtocolFeePercentageCacheUpdated(bytes32,indexed address)
           handler: handleProtocolFeePercentageCacheUpdated
-        - event: RecoveryModeStateChanged(bool)
+        - event: RecoveryModeStateChanged(bool,indexed address)
           handler: handleRecoveryModeStateChanged
-        - event: PausedStateChanged(bool)
+        - event: PausedStateChanged(bool,indexed address)
           handler: handlePausedStateChanged
   - kind: ethereum/contract
     name: WeightedPool2Tokens
@@ -1883,7 +1883,7 @@ templates:
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-        - event: SwapFeePercentageChanged(uint256)
+        - event: SwapFeePercentageChanged(uint256,indexed address)
           handler: handleSwapFeePercentageChange
         - event: AmpUpdateStarted(uint256,uint256,uint256,uint256)
           handler: handleAmpUpdateStarted
@@ -1893,11 +1893,11 @@ templates:
           handler: handleTokenRateProviderSet
         - event: TokenRateCacheUpdated(indexed uint256,uint256)
           handler: handleTokenRateCacheUpdated
-        - event: ProtocolFeePercentageCacheUpdated(indexed uint256,uint256)
+        - event: ProtocolFeePercentageCacheUpdated(bytes32,indexed address)
           handler: handleProtocolFeePercentageCacheUpdated
-        - event: RecoveryModeStateChanged(bool)
+        - event: RecoveryModeStateChanged(bool,indexed address)
           handler: handleRecoveryModeStateChanged
-        - event: PausedStateChanged(bool)
+        - event: PausedStateChanged(bool,indexed address)
           handler: handlePausedStateChanged
   - kind: ethereum/contract
     name: LinearPool
