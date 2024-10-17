@@ -35,6 +35,9 @@ export const assets: Assets = {
     Address.fromString("0xa219439258ca9da29e9cc4ce5596924745e12b93"), // Linea USDT
     Address.fromString("0x176211869ca2b568f2a7d4ee941e073a821ee1ff"), // Linea USDC
     Address.fromString("0x4af15ec2a0bd43db75dd04e62faa3b8ef36b00d5"), // Linea DAI
+    Address.fromString("0xA4F6268f8f6CA4D9160C584338587B515AfF7B88"), // Lumia Testnet USDT
+    Address.fromString("0x9140084f70C3DF3ed0Cf7a13c7617CC7a45C3E25"), // Lumia Testnet USDC
+    Address.fromString("0x8f60119E7b6D0691097232e8F25E19961623ad27"), // Lumia Testnet DAI
   ],
   pricingAssets: [
     Address.fromString("0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"), // WETH
@@ -55,6 +58,7 @@ export const assets: Assets = {
     Address.fromString("0xA13a9247ea42D743238089903570127DdA72fE44"), // bb-a-USD
     Address.fromString("0x2C1b868d6596a18e32E61B901E4060C872647b6C"), // Linea Testnet WETH
     Address.fromString("0xe5d7c2a44ffddf6b295a15c148167daaaf5cf34f"), // Linea WETH
+    Address.fromString("0x1a1aF9C78704D3a0Ab9e031C92E7bd808711A582"), // Lumia Testnet WETH
   ],
   fxAssets: [
     Address.fromString("0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"), // USDC

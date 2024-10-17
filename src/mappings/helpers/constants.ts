@@ -59,5 +59,5 @@ function forNetwork(addressByNetwork: AddressByNetwork, network: string): Addres
 
 // export let VAULT_ADDRESS = forNetwork(vaultAddressByNetwork, network);
 export let VAULT_ADDRESS = Address.fromString(
-  "0x286381aEdd20e51f642fE4A200B5CB2Fe3729695"
+  "0x6D47B3b1b54F47Fe020F9705dE81aF4a512872f9"
 );
